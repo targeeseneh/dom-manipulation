@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM Manipulation</title>
+
+	<style type="text/css">
+
+		body{
+			background-color: black;
+		}
+
+		#container{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			padding: 20px;
+			margin-top: 20px;
+		}
+
+
+		h1{
+			font-size: 43px;
+			font-weight: bolder;
+			font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+			text-align: center;
+			color: white;
+		}
+
+		h1:hover{
+			color: red;
+		}
+
+		p{
+			
+			margin: 10px;
+		}
+
+		h3{
+			font-size: 22px;
+			font-weight: bolder;
+			margin-left: 16px;
+			color: crimson;
+		}
+
+		h3:hover{
+			color: white;
+		}
+
+		.main p{
+			font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+			font-size: 20px;
+			font-weight: bold;
+			padding: 10px;
+			color: white;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div class="main">
+			<h1>DOM Manipulation</h1>
+			<p>
+				What is the DOM? DOM stads for Document Object Model. It is a way of manapulating object of an html document. It is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document.
+			</p>
+			<h3>Adding element to the DOM</h3>
+			<p>
+				The are two different ways of adding an element to the page. The two ways are the append and appendchild method, we select the element we want to add to the DOM and append an element to it. In appending there is append and appendchild.    
+			</p>
+			<h3>Different between append and appendc child </h3>
+			<p>
+				The different between append and appendchild is that in append, we can append divs, spans, strig or even mltiple strings; while appendchild, we can only append divs and spans but not strings. 
+			</p>
+			<h3>Creating element in the DOM</h3>
+			<p>
+				In creating an element in the DOM, we use the document.createElement("") method and  place the element we want to create in the parenthesis. It is a key note to keep in mind that after creating an element, to make it visible we will have to add that element and to add element to the body we use body.append() and add the element name in the parenthesis like div. And if by any means we want to add a text to that div element, we use div.innerText = "Hello World".
+			</p>
+			<h3>Different between innerText and TextContent</h3>
+			<p>
+				The different between innerText and TextContent is that innerText will print the exact text content with all the spacing and all of the indentation of all the content inside the div; while innerText look at the css to see if  the item  actually visible on the screen, if it is, it gives it to us and if it's not, it dosent. It display our text just as it should display in the HTML. In Javascript, innerHTML is the only way we can add HTML from a string into an element.
+			</p> 
+			<h3>Removing element</h3>
+			<p>Removing element from the page is done by writing the element name and the item we want to remove and call the the remove function. <br> The "toggle" is used to add elements if they are already added to the page and remove it if it is already added. <br> To access any css property on the page, we'll use the the style property and we do that by doing style, dot(.) and the name of the property and give it the change we want to give it. </p> 
+		</div>
+	</div>
+
+	<script type="text/javascript">
+
+		/* 1. BMI Calculator
+
+			Build a program that calculates a person's Body Mass Index (BMI) based on their height and weight. The program should prompt the user to enter their height (in meters) and weight (in kilograms), and then calculate and display their BMI.
+		*/
+
+
+
+
+
+		/* 2. Driving License Eligibility
+
+			Create a program that checks if a person is eligible for a driver's license based on their age. The program should prompt the user to enter their age, and then display a message indicating whether they are eligible for a driver's license or not.
+		*/
+			let user_age = prompt("Hello, please enter your age");
+   			 if(user_age >=18 ){
+      	 		 alert("You are eligible to obtain a driver license.")
+   			 }
+   
+   			 else{
+      			 alert("Sorry!! You've not reach the age of obtaining a driver's license.")
+    		}
+
+
+		/* 3. Age Group Classifier
+
+			Write a program that classifies a person into different age groups based on their age. The program should prompt the user to enter their age and then display a message indicating which age group they belong to (e.g., child, teenager, adult, senior). Use a Switch statement
+		*/
+    		
+    		let age = prompt("What is your age?");
+			
+			switch (true) {
+			    case age >=0 && age <= 12:
+			        alert("Child");
+			        break;
+			    case age >= 13 && age <= 19:
+			        alert("Teenager");
+			        break;
+			    case age >= 20 && age <= 50:
+			        alert("Adult");
+			        break;
+			    case age >= 51:
+			        alert("Senior");
+			        break;
+			}
+			
+
+		/* 4. Multiply
+
+			Create a function called 'multiply' that takes two parameters and returns their product.
+		*/
+			 function  multiply (a, b){
+			 	console.log(a * b)
+			 }
+			 multiply(3,12);
+
+
+		/* 5. Divide
+
+			Create a function called 'divide' that takes two parameters and returns their quotient.
+		*/
+
+			 function  divide (a, b){
+			 	console.log(a / b)
+			 }
+			 divide(72,12);
+
+
+		/* 6. Subtract
+
+			Create a function called 'subtract' that takes two parameters and returns their difference.
+		*/
+
+			 function  substract (a, b){
+			 	console.log(a - b)
+			 }
+			 substract(22,12);
+
+
+		/* 7. isEven
+
+			Create a function called 'isEven' that takes a number as a parameter and returns true if it's even, otherwise false.
+		*/
+			function isEven(num){
+				return num % 2 === 0;
+			}
+			console.log(isEven(6));
+			console.log(isEven(7));
+
+		/* 8. Temperature
+
+			Write an if-else statement that checks if a variable 'temperature' is greater than 30 and prints "It's hot" if true, otherwise, print "It's not so hot".
+		*/
+			let temperature = 29;
+			if(temperature > 30){
+				console.log("It's hot")
+			}
+			else{
+				console.log("It's not so hot")
+			}
+		
+	</script>
+</body>
+</html>
